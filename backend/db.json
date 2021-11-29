@@ -65,7 +65,16 @@
       "id": 9
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 1,
+      "name": "Caneta BIC",
+      "price": 5.99,
+      "qtd": 1,
+      "description": "Caneta BIC de cor preta.",
+      "image": "https://farmaciaindiana.vteximg.com.br/arquivos/ids/214056/70330181120.jpg?v=636906725361830000"
+    }
+  ],
   "order": [],
   "permission": [
     {

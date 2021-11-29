@@ -110,4 +110,15 @@ export class ShoppingCartComponent implements OnInit {
         this.router.navigate(['/order']).then(() => window.location.reload());
       });
   }
+
+  deleteCart(): void {
+    this.products.map((item) => {
+      this.shoppingCarService.delete(item).subscribe((element) => {
+        this.shoppingCarService.showMessage("All items in your cart have been successfully deleted!!!");
+        window.location.reload();
+        
+        this.products = element;
+      })
+    })
+  } 
 }
