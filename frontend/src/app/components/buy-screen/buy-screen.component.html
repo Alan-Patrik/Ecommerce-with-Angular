@@ -1,0 +1,43 @@
+<section class="container" *ngIf="isPresent === true && order !== {}">
+  <mat-card class="card mat-elevation-z4">
+    <article class="message">
+      <h1>Pedido realizado com sucesso!</h1>
+      <p>
+        Olá, seu pedido está sendo processado. Assim que for
+        <strong>aprovado</strong>, será enviado um
+        <strong>e-mail de confirmação do pagamento</strong>.
+      </p>
+    </article>
+    <article class="info">
+      <div class="info-order">
+        <h2 class="info-order-title">Informações Do Pedido</h2>
+        <div class="d-span">
+          <span class="id">ID: {{ order.id }} </span>
+          <span class="id">Total: {{ order.total }} </span>
+          <span class="id">Foma de pagamento: Pagar com bitcoin</span>
+          <span class="id">Forma de envio: Sedex</span>
+          <span class="id">CEP de entrega: 30140-072</span>
+        </div>
+      </div>
+      <div class="info-payment">
+        <h2 class="info-order-title-payment">Dados Para Pagamento</h2>
+        <p>
+          Finalize o pedido e pague com bitcoin. Com conta:
+          <strong>xxxxx-x</strong> e agência: <strong>xxxx-x</strong> e cpf:
+          <strong>000000000-00</strong>
+        </p>
+      </div>
+    </article>
+    <div class="span-info">
+      <p>
+        <strong>*</strong>Os produtos serão enviados em até 30 dias úteis após a
+        aprovação do pagamento.
+      </p>
+    </div>
+  </mat-card>
+  <button class="btn-print" mat-raised-button color="primary" routerLink="/nf-e">
+    Download NF-e
+  </button>
+</section>
+
+<app-page-not-found *ngIf="isPresent === false && order === {}"></app-page-not-found>

@@ -1,0 +1,100 @@
+<section class="container">
+  <h1 class="title">Identification</h1>
+  <div class="content-container">
+    <mat-card class="content login">
+      <mat-card-title class="card-title">Sign in</mat-card-title>
+      <form [formGroup]="formService.formLogin" (ngSubmit)="onSubmitSigIn()">
+        <mat-form-field>
+          <input
+            matInput
+            required
+            id="email"
+            placeholder="Email"
+            formControlName="email"
+            type="email"
+          />
+          <mat-error
+            *ngIf="formService.formLogin.controls['email'].errors?.required"
+            >Invalid email address.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            required
+            id="password"
+            placeholder="Password"
+            formControlName="password"
+            type="text"
+          />
+          <mat-error
+            *ngIf="formService.formLogin.controls['password'].errors?.required"
+            >This field is mandatory.</mat-error
+          >
+          <mat-error
+            *ngIf="formService.formLogin.controls['password'].errors?.minlength"
+            >Minimum 8 characters needed.</mat-error
+          >
+        </mat-form-field>
+        <button
+          class="button"
+          type="submit"
+          mat-raised-button
+          color="primary"
+          [disabled]="formService.formLogin.invalid"
+        >
+          <i class="icon material-icons"> login </i>
+          Sign in
+        </button>
+      </form>
+    </mat-card>
+    <mat-card class="register content">
+      <mat-card-title class="card-title">Sign up</mat-card-title>
+      <form [formGroup]="formService.formLogin" (ngSubmit)="onSubmitSignUp()">
+        <mat-form-field>
+          <input
+            matInput
+            required
+            id="email"
+            placeholder="Email"
+            formControlName="email"
+            type="email"
+          />
+          <mat-error
+            *ngIf="formService.formLogin.controls['email'].errors?.required"
+            >Invalid email address.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            required
+            id="password"
+            placeholder="Password"
+            formControlName="password"
+            type="password"
+          />
+          <mat-error
+            *ngIf="formService.formLogin.controls['password'].errors?.required"
+            >This field is mandatory.</mat-error
+          >
+          <mat-error
+            *ngIf="formService.formLogin.controls['password'].errors?.minlength"
+            >Minimum 8 characters needed.</mat-error
+          >
+        </mat-form-field>
+        <button
+          class="button"
+          type="submit"
+          mat-raised-button
+          color="primary"
+          [disabled]="formService.formLogin.invalid"
+        >
+          <i class="material-icons"> text_snippet </i>
+          Sign up
+        </button>
+      </form>
+    </mat-card>
+    <!-- <button mat-raised-button>Cancel</button> -->
+  </div>
+</section>

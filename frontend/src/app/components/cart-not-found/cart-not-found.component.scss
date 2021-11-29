@@ -1,0 +1,31 @@
+.cart-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - 160px);
+  
+      .icon {
+        font-size: 100px;
+        margin-bottom: 20px;
+      }
+  
+      .button {
+        width: 160px;
+        height: 40px;
+  
+        .icon-button {
+          font-size: 28px;
+          color: white;
+        }
+      }
+    }
+  }

@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC",
+      "description": "Caneta BIC de cor preta.",
+      "price": 5.99,
+      "image": "https://farmaciaindiana.vteximg.com.br/arquivos/ids/214056/70330181120.jpg?v=636906725361830000",
+      "qtd": 1
+    },
+    {
+      "id": 2,
+      "name": "Notebook Mac Pro",
+      "price": 12000.99,
+      "qtd": 1,
+      "image": "https://lacomparacion.com/wp-content/uploads/2020/02/MacBook-Pro-2020-podria-recibir-un-gran-impulso-con-los.jpg",
+      "description": "Notebook Apple, modelo Mac Pro."
+    },
+    {
+      "id": 3,
+      "name": "Sansung S20+",
+      "price": 5000.99,
+      "qtd": 1,
+      "image": "https://m.media-amazon.com/images/I/71aT3SlKWRL._AC_SX522_.jpg",
+      "description": "Celular Sansung, modelo Sansung S20+."
+    },
+    {
+      "name": "TV 50 pol TCL/SEMP",
+      "price": "4500.00",
+      "qtd": 1,
+      "image": "https://i.glbimg.com/og/ig/infoglobo1/f/original/2021/08/27/mp15242219_smart-tv-4k-led-ultra-hd-65-semp-tcl-com-hdr-wi-fi-3-hdmi-2-usb-p65us_1_zoom.jpeg",
+      "description": "TV 50 pol TCL/SEMP fullHD",
+      "id": 4
+    },
+    {
+      "name": "Caneca porcelana",
+      "price": "25.00",
+      "qtd": 1,
+      "description": "Caneca personalizada",
+      "image": "https://m.media-amazon.com/images/I/51PTUHhS6QL._AC_SY450_.jpg",
+      "id": 5
+    },
+    {
+      "name": "Cadeira Gamer",
+      "price": "1500.00",
+      "qtd": 1,
+      "image": "https://images.kabum.com.br/produtos/fotos/114314/cadeira-gamer-husky-blizzard-rgb-hlb-rgb_1601900832_gg.jpg",
+      "description": "Cadeira gamer reclinavel",
+      "id": 7
+    },
+    {
+      "name": "Voalão Tagima Dallas",
+      "price": "1200.00",
+      "qtd": 1,
+      "image": "https://24694.cdn.simplo7.net/static/24694/sku/violao-violao-tagima-dallas-ns-america-series-mini-jumbo-de-aco-c-afinador-natural-fosco--p-1600871461168.jpg",
+      "description": "Voalão Tagima Dallas",
+      "id": 8
+    },
+    {
+      "name": "Home Theater",
+      "price": "1045.59",
+      "qtd": 1,
+      "image": "https://http2.mlstatic.com/D_NQ_NP_818808-MLA42664301638_072020-O.webp",
+      "description": "Home Theater Logitech Z607",
+      "id": 9
+    }
+  ],
+  "cart": [],
+  "order": [],
+  "permission": [
+    {
+      "id": 1,
+      "name": "admin"
+    },
+    {
+      "id": 2,
+      "name": "user"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "adminUser",
+      "permissionId": {
+        "id": 1,
+        "name": "admin"
+      }
+    },
+    {
+      "id": 2,
+      "name": "visitorUser",
+      "permissionId": {
+        "id": 2,
+        "name": "user"
+      }
+    }
+  ],
+  "user": []
+}

@@ -1,0 +1,78 @@
+<mat-card>
+  <mat-card-title>New Product</mat-card-title>
+  <form [formGroup]="formService.form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input
+        matInput
+        required
+        placeholder="Name"
+        type="text"
+        id="name"
+        formControlName="name"
+      />
+      <mat-error *ngIf="formService.form.controls['name'].errors?.required"
+        >This field is mandatory.</mat-error
+      >
+      <mat-error *ngIf="formService.form.controls['name'].errors?.minlength"
+        >Minimum 3 characters needed.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        required
+        placeholder="Price (R$)"
+        type="number"
+        id="price"
+        formControlName="price"
+      />
+      <mat-error *ngIf="formService.form.controls['price'].errors?.required"
+        >This field is mandatory.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        required
+        placeholder="Description"
+        id="description"
+        type="text"
+        formControlName="description"
+      />
+      <mat-error
+        *ngIf="formService.form.controls['description'].errors?.required"
+        >This field is mandatory.</mat-error
+      >
+      <mat-error
+        *ngIf="formService.form.controls['description'].errors?.maxlength"
+        >Maximum 100 characters needed.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        required
+        placeholder="Image link"
+        id="image"
+        type="text"
+        formControlName="image"
+      />
+      <mat-error *ngIf="formService.form.controls['image'].errors?.required"
+        >This field is mandatory.</mat-error
+      >
+      <mat-error *ngIf="formService.form.controls['image'].errors?.minlength"
+        >Minimum 10 characters needed.</mat-error
+      >
+    </mat-form-field>
+
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="formService.form.invalid"
+    >
+      Save
+    </button>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+  </form>
+</mat-card>

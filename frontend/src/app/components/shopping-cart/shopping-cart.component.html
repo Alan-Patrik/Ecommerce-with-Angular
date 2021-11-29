@@ -1,0 +1,61 @@
+<section class="container" *ngIf="isPresent === true && products.length >= 1">
+  <div class="title"><h1>Shopping Cart</h1></div>
+  <mat-card class="cart mat-elevation-z4" *ngFor="let product of products">
+    <div>
+      <img mat-card-md-image [src]="product.image" />
+    </div>
+    <div class="description">
+      <h2 class="name">
+        <strong>{{ product.name }}</strong>
+      </h2>
+      <span>{{ product.description }}</span>
+      <span class="price"
+        ><strong>{{ product.price | currency: "BRL" }}</strong></span
+      >
+    </div>
+    <form>
+      <button (click)="subtraction(product.id!)" [disabled]="product.qtd! <= 1">
+        <i class="material-icons"> chevron_left </i>
+      </button>
+      <span class="span-view">{{ product.qtd }}</span>
+      <button (click)="sum(product.id!)">
+        <i class="material-icons"> chevron_right </i>
+      </button>
+    </form>
+
+    <button
+      class="remove-to-cart"
+      mat-raised-button
+      color="warn"
+      routerLink="/cart/{{ product.id }}"
+    >
+      <i class="material-icons"> delete </i>
+    </button>
+  </mat-card>
+  <article class="total">
+    <h1>
+      <strong>Total: {{ total | currency: "BRL" }}</strong>
+    </h1>
+    <div class="action">
+      <button
+        class="link-add-item"
+        mat-raised-button
+        routerLink=""
+        color="primary"
+      >
+        Add more items
+      </button>
+      <button
+        mat-raised-button
+        routerLink="/order"
+        color="warn"
+        (click)="post()"
+      >
+        Finish
+      </button>
+    </div>
+  </article>
+</section>
+<app-cart-not-found
+  *ngIf="isPresent === false && products.length <= 0"
+></app-cart-not-found>

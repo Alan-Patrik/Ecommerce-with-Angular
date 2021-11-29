@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 100%;
+    height: calc(100vh - 160px);
+    background-color: #44444460;
+  
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  
+      width: 200px;
+      height: 160px;
+      max-width: 304px;
+      padding: 32px;
+  
+      .title {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        font-weight: 700;
+      }
+  
+      .span-modal {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+  
+      .buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 15px;
+          width: 100%;
+  
+          .btn-no {
+              margin-right: 10px;
+          }
+  
+          .btn-no, .btn-yes {
+              width: 100px;
+              font-size: 18px;
+          }
+      }
+    }
+  }
+  

@@ -1,0 +1,112 @@
+<section class="content" #content *ngIf="isPresent === true && order !== {}">
+  <article class="header">
+    <div class="content-header">
+      <span class="title-nfe"
+        >RECEBEMOS DE LET'S CODE CURSOS AS MERCADORIAS E/OU SERVIÇOS CONSTANTS
+        DA NOTA FISCAL AO LADO</span
+      >
+      <div class="one">
+        <span class="sp-1">Data do Recebimento</span>
+        <span class="sp-2">Identificação e assinatura do recebedor</span>
+      </div>
+    </div>
+    <div class="two">
+      <span class="sp-3"><strong>NF-e 1</strong></span>
+      <span class="sp-n"><strong>Nº 13.135</strong></span>
+      <span class="sp-4"><strong>Série 1</strong></span>
+    </div>
+  </article>
+  <div class="line"></div>
+  <article class="artc-1">
+    <div class="part-1">
+      <div class="logo">
+        <img class="img-1" src="../../../assets/img/logo-lets-code.png" />
+        <h4 class="h4-1"><strong>Let's Code Cursos</strong></h4>
+      </div>
+      <span class="sp-5">Av. Faria Lima, 1306 - Pinheiros-SP</span>
+    </div>
+    <div class="part-2">
+      <span class="sp-6"><strong>DANFE</strong></span>
+      <div class="div-ol-1">
+        <ol class="ol-1">
+          <li>Entrada</li>
+          <li>Saída</li>
+        </ol>
+        <span class="sp-7"><strong>2</strong></span>
+      </div>
+      <div class="div-sp-1">
+        <span class="sp-8"><strong>Nº 13.135</strong></span>
+        <span class="sp-9">Série 1</span>
+        <span class="sp-10">Página 1 de 1</span>
+      </div>
+    </div>
+    <div class="part-3">
+      <img class="img-2" src="../../../assets/img/codigo-de-Barras.png" />
+    </div>
+  </article>
+  <section class="products">
+    <table class="total-table">
+      <tbody class="total-tbody">
+        <tr class="total-tr">
+          <td class="total-td">
+            <strong>Itens da nota fiscal</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Descrição do produto</th>
+          <th>Qtd</th>
+          <th>Preço unid.</th>
+          <th>UNID.</th>
+          <th>CST</th>
+          <th>NCM/SH</th>
+          <th>CFOP</th>
+          <th>BC ICMF</th>
+          <th>Vlr. ICMF</th>
+          <th>Vlr. IPI</th>
+          <th>% IPI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let products of order.products">
+          <td>{{ products.id }}</td>
+          <td>{{ products.name }}</td>
+          <td>{{ products.description }}</td>
+          <td>{{ products.qtd }}</td>
+          <td>{{ products.price | currency: "BRL" }}</td>
+          <td>UN</td>
+          <td>00</td>
+          <td>39233000</td>
+          <td>5.101</td>
+          <td>000</td>
+          <td>50</td>
+          <td>25</td>
+          <td>00</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="total-table">
+      <tbody class="total-tbody">
+        <tr class="total-tr">
+          <td class="total-td">
+            <strong>TOTAL: </strong> {{ order.total | currency: "BRL" }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+<div class="btn-print">
+  <button class="finish" mat-raised-button color="primary" (click)="print()">
+    <i class="material-icons"> print </i>
+  </button>
+</div>
+
+<app-page-not-found
+  *ngIf="isPresent === false && order === {}"
+></app-page-not-found>

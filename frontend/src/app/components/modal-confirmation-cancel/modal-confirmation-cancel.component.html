@@ -1,0 +1,17 @@
+<section class="container">
+  <mat-card class="content">
+    <span class="title">ORDER CANCEL</span>
+    <span class="span-modal"> Are you sure you want to cancel the order?</span>
+    <div class="buttons">
+      <button class="btn-no" mat-raised-button (click)="cancel()">No</button>
+      <button
+        class="btn-yes"
+        mat-raised-button
+        color="warn"
+        (click)="deleteOrder()"
+      >
+        Yes
+      </button>
+    </div>
+  </mat-card>
+</section>

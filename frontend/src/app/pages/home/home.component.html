@@ -1,0 +1,33 @@
+<section class="container">
+  <div class="title">
+    <h1 class="h1-title">Welcome!</h1>
+    <h3 class="h3-subtitle">
+      System to exemplify the construction of an Angular register
+    </h3>
+  </div>
+
+  <div class="content">
+    <mat-card class="home mat-elevation-z3" *myFor="let products; em: products">
+      <div>
+        <img mat-card-md-image [src]="products.image" />
+      </div>
+      <div class="description">
+        <h2 class="name">
+          <strong>{{ products.name }}</strong>
+        </h2>
+        <span>{{ products.description }}</span>
+        <span class="price"
+          ><strong>{{ products.price | currency: "BRL" }}</strong></span
+        >
+        <button
+          class="add-to-cart"
+          mat-raised-button
+          (click)="addToCart(products)"
+          color="primary"
+        >
+          Add to cart
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</section>

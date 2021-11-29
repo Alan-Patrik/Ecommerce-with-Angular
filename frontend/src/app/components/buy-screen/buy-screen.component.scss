@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 160px);
+  width: 100%;
+
+  .card {
+      padding: 32px;
+    .message {
+      text-align: center;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 750px;
+
+      .info-order > .d-span {
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+      }
+
+      .info-payment {
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+
+        width: 300px;
+      }
+    }
+
+    .span-info {
+      display: flex;
+      align-items: center;
+      width: 750px;
+      margin-top: 20px;
+    }
+  }
+
+  .btn-print {
+    margin-top: 20px;
+  }
+}

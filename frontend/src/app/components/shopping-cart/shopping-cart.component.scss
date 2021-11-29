@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .title {
+    margin: 30px;
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      width: 100%;
+
+      .name {
+        margin: 0;
+        padding: 0;
+      }
+
+      .price {
+        color: rgba($color: #000000, $alpha: 0.7);
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+
+      .span-view {
+        width: 30px;
+        text-align: center;
+        border-width: 1px;
+        border-radius: 3px;
+      }
+
+      button {
+        outline-style: none;
+        list-style: none;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: transparent;
+      }
+    }
+
+    .remove-to-cart {
+      margin-top: 10px;
+    }
+  }
+
+  .total {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 830px;
+    margin: 20px 0 100px 0;
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+
+      .link-add-item {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.container:first-child .title {
+  display: flex;
+  align-self: center;
+  justify-self: flex-start;
+  width: 100%;
+}

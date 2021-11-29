@@ -1,0 +1,27 @@
+<mat-toolbar class="header mat-elevation-z4">
+  <div class="div-title-group">
+    <span class="title">
+      <a routerLink="/">E-Commerce</a>
+    </span>
+    <span class="title-group">
+      <a>
+        <i class="material-icons"> {{ icon }} </i>
+        {{ title }}
+      </a>
+    </span>
+  </div>
+  <div class="cart-group">
+    <span class="cart">
+      <a routerLink="/cart">
+        <img
+          class="cart-img"
+          src="assets/img/carrinho-de-compras.png"
+          alt="logo"
+        />
+      </a>
+    </span>
+    <div *ngIf="product.length >= 1">
+      <span class="amount-result">{{ product.length }}</span>
+    </div>
+  </div>
+</mat-toolbar>
